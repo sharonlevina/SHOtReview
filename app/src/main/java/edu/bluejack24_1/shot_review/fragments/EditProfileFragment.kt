@@ -45,8 +45,8 @@ class EditProfileFragment : Fragment() {
                 val profilePictureUrl = it.getString("profilePicture")
 
                 Log.d("username", username.toString())
-                binding.userName.text = username
-                binding.userBio.setText(bio) // Set the bio as the text in the EditText
+                binding.userName.setText(username)
+                binding.userBio.setText(bio)
 
                 Glide.with(this)
                     .load(profilePictureUrl)
@@ -113,6 +113,7 @@ class EditProfileFragment : Fragment() {
     }
 
     private fun saveProfile(uid: String?) {
+        val updatedUsername = binding.userName.text.toString()
         val updatedBio = binding.userBio.text.toString()
 
         if (imageUri != null) {
@@ -123,7 +124,7 @@ class EditProfileFragment : Fragment() {
                     fileReference.downloadUrl.addOnSuccessListener { uri ->
                         val imageUrl = uri.toString()
                         // Update both bio and profile picture URL
-                        updateProfile(uid, updatedBio, imageUrl)
+                        updateProfile(uid, updatedUsername, updatedBio, imageUrl)
                     }
                 }
                 .addOnFailureListener { e ->
@@ -132,15 +133,16 @@ class EditProfileFragment : Fragment() {
                 }
         } else {
             // If no new image has been selected, only update the bio
-            updateProfile(uid, updatedBio, null)
+            updateProfile(uid, updatedUsername, updatedBio, null)
         }
     }
 
-    private fun updateProfile(uid: String?, updatedBio: String, profilePictureUrl: String?) {
+    private fun updateProfile(uid: String?, updatedUsername: String, updatedBio: String, profilePictureUrl: String?) {
         val docRef = db.collection("users").document(uid!!)
 
         val updates = hashMapOf<String, Any>(
-            "bio" to updatedBio
+            "username" to updatedUsername,  // Update username
+            "bio" to updatedBio  // Update bio
         )
 
         if (profilePictureUrl != null) {

@@ -102,18 +102,19 @@
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/poppins"/>
 
-    <TextView
+    <EditText
         android:id="@+id/userName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textColor="@color/light_brown"
-        android:text="Jelly Bean"
         android:layout_marginTop="4dp"
         android:layout_gravity="start"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:fontFamily="@font/poppins"/>
+        android:fontFamily="@font/poppins"
+        android:minLines="1"
+        android:inputType="textMultiLine"/>
 
     <!-- Bio -->
     <TextView

@@ -46,6 +46,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_marginBottom="10dp">
 
             <ImageView
@@ -59,6 +60,15 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"/>
 
+            <ImageView
+                android:id="@+id/editIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@id/profilePicture"
+                android:layout_alignEnd="@id/profilePicture"
+                android:src="@drawable/ic_edit"
+                android:background="@drawable/circle_background"
+                android:padding="6dp"/>
         </RelativeLayout>
 
         <TextView

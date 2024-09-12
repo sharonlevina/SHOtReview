@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Coffee Gallery"
+            android:text="@string/gallery"
             android:textColor="@color/brown"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -110,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Menu"
+            android:text="@string/menu"
             android:textColor="@color/brown"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -128,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Public Facilities"
+            android:text="@string/facilities"
             android:textColor="@color/brown"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -146,7 +146,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Reviews"
+            android:text="@string/rating"
             android:textColor="@color/brown"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -179,12 +179,13 @@
 
         <Button
             android:id="@+id/writeReviewBtn"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/brown"
-            android:text="Write Review"
-            android:textColor="@android:color/white" />
+            android:text="@string/writeBtn"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/light_brown"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins"/>
     </LinearLayout>
 </ScrollView>

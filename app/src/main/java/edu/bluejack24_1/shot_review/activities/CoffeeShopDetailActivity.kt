@@ -364,9 +364,23 @@ class CoffeeShopDetailActivity : AppCompatActivity() {
 
         userNameTextView.text = username
         reviewTextTextView.text = review.reviewText
-//        ratingTextView.text = review.rating.toString()
         ratingTextView.text = "${review.rating} ★"
+
+        // Membuat layout params untuk mengatur jarak antar review item
+        val layoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+
+        // Menambahkan margin bawah, kiri, dan kanan
+                layoutParams.bottomMargin = 16.dp(this)  // Margin bawah
+                layoutParams.marginStart = 16.dp(this)   // Margin kiri
+                layoutParams.marginEnd = 16.dp(this)     // Margin kanan
+
+        // Terapkan layout params ke reviewView
+                reviewView.layoutParams = layoutParams
 
         binding.reviewContainer.addView(reviewView)
     }
+
 }
