@@ -374,8 +374,8 @@ class CoffeeShopDetailActivity : AppCompatActivity() {
 
         // Menambahkan margin bawah, kiri, dan kanan
                 layoutParams.bottomMargin = 16.dp(this)  // Margin bawah
-                layoutParams.marginStart = 16.dp(this)   // Margin kiri
-                layoutParams.marginEnd = 16.dp(this)     // Margin kanan
+                layoutParams.marginStart = 10.dp(this)   // Margin kiri
+                layoutParams.marginEnd = 10.dp(this)     // Margin kanan
 
         // Terapkan layout params ke reviewView
                 reviewView.layoutParams = layoutParams
